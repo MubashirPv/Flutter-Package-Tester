@@ -1,0 +1,19 @@
+[33mcommit 473d74ae40d4790bb12628699f909c3e9318fbcc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MubashirPv <mubashirpvm@gmail.com>
+Date:   Wed May 24 23:56:22 2023 +0530
+
+    test commit
+
+[1mdiff --git a/lib/home_screen.dart b/lib/home_screen.dart[m
+[1mindex c2d295e..373b1cf 100644[m
+[1m--- a/lib/home_screen.dart[m
+[1m+++ b/lib/home_screen.dart[m
+[36m@@ -10,7 +10,7 @@[m [mclass HomeScreen extends StatelessWidget {[m
+         title: const Text("Flutter Packages"),[m
+       ),[m
+       body: const Center([m
+[31m-        child: Text('Flutter Package List'),[m
+[32m+[m[32m        child: Text('Flutter Package List',style: TextStyle(fontWeight: FontWeight.bold),),[m
+       ),[m
+     );[m
+   }[m
