@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_package_tester/packages/google_fonts.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_package_tester/packages/newpackage.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
-
+  HomeScreen({super.key});
+  final _packagetitle = [
+    "Google Fonts",
+    "New Package",
+  ];
+  final _packagesubtitle = [
+    "A Flutter package to use fonts from fonts.google.com",
+    "New Package"
+  ];
+  final _packagescreens = [
+    const GoogleFontsSamples(),
+    const NewPackage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: const Text("Flutter Packages"),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: _packagetitle.length,
         itemBuilder: (context, index) {
           return Card(
             elevation: 30,
@@ -24,17 +36,33 @@ class HomeScreen extends StatelessWidget {
               width: 250,
               height: 100,
               child: ListTile(
-                leading: Text(style: GoogleFonts.lato(), (index+1).toString()),
+                leading: const Icon(
+                  Icons.font_download_sharp,
+                  size: 45,
+                ),
                 trailing: IconButton(
-                    icon:  Icon(Icons.person_search,size: 45),
+                    icon: const Icon(Icons.forward, size: 45),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => GoogleFontsSamples()),
+                        MaterialPageRoute(
+                            builder: (context) => _packagescreens[index]),
                       );
                     }),
-                title: const Text("Google Fonts"),
-                subtitle: const Text('A Flutter package to use fonts from fonts.google.com.'),
+                title:  Text(
+                  _packagetitle[index],
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                subtitle: Text(
+                  _packagesubtitle[index],
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
               ),
             ),
           );
