@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_package_tester/packages/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+   HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,17 @@ class HomeScreen extends StatelessWidget {
               width: 250,
               height: 100,
               child: ListTile(
-                leading: const Text("data"),
+                leading: Text(style: GoogleFonts.lato(), (index+1).toString()),
                 trailing: IconButton(
-                    icon: const Icon(Icons.flutter_dash_outlined),
-                    onPressed: () {}),
-                title: const Text('Title'),
-                subtitle: const Text('Description'),
+                    icon:  Icon(Icons.person_search,size: 45),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => GoogleFontsSamples()),
+                      );
+                    }),
+                title: const Text("Google Fonts"),
+                subtitle: const Text('A Flutter package to use fonts from fonts.google.com.'),
               ),
             ),
           );
