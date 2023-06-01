@@ -38,7 +38,10 @@ dependencies:
   google_fonts: ^4.0.5
   battery_plus: ^4.0.1
   device_info_plus: ^9.0.2
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin
 
 dev_dependencies:
   flutter_test:

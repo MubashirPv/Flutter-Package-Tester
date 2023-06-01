@@ -4,6 +4,8 @@ import 'package:flutter_package_tester/packages/device_info.dart';
 import 'package:flutter_package_tester/packages/google_fonts.dart';
 import 'package:flutter_package_tester/packages/newpackage.dart';
 
+import 'models/list_package.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final _packagetitle = ["Google Fonts", "New Package", "Battery info","Device info"];
@@ -69,6 +71,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           );
+          
         },
       ),
     );
