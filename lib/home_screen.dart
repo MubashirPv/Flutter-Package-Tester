@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_package_tester/packages/google_fonts.dart';
-import 'package:flutter_package_tester/packages/newpackage.dart';
+import 'package:flutter_package_tester/packages/font_awesome_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final _packagetitle = [
     "Google Fonts",
-    "New Package",
+    "Font Awesome Flutter",
   ];
   final _packagesubtitle = [
     "A Flutter package to use fonts from fonts.google.com",
-    "New Package"
+    "The Font Awesome Icon pack available as Flutter Icons"
   ];
   final _packagescreens = [
     const GoogleFontsSamples(),
-    const NewPackage(),
+     FontAwesomeFlutter(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,10 +36,10 @@ class HomeScreen extends StatelessWidget {
               width: 250,
               height: 100,
               child: ListTile(
-                leading: const Icon(
-                  Icons.font_download_sharp,
-                  size: 45,
-                ),
+                // leading: const Icon(
+                //   Icons.font_download_sharp,
+                //   size: 45,
+                // ),
                 trailing: IconButton(
                     icon: const Icon(Icons.forward, size: 45),
                     onPressed: () {
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                 title:  Text(
                   _packagetitle[index],
                   style: const TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
