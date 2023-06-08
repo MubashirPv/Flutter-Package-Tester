@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_package_tester/packages/device_info.dart';
+// import 'package:flutter_package_tester/packages/battery_info.dart';
+// import 'package:flutter_package_tester/packages/device_info.dart';
 import 'package:flutter_package_tester/packages/google_fonts.dart';
 import 'package:flutter_package_tester/packages/font_awesome_flutter.dart';
+
+// import 'models/list_package.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final _packagetitle = [
     "Google Fonts",
     "Font Awesome Flutter",
+    // "Battery info",
+     "Device info",
   ];
   final _packagesubtitle = [
     "A Flutter package to use fonts from fonts.google.com",
-    "The Font Awesome Icon pack available as Flutter Icons"
+    "The Font Awesome Icon pack available as Flutter Icons",
+    // "A Flutter plugin to access various information about the battery of the device the app is running on",
+    'Get current device information from within the Flutter application',
   ];
   final _packagescreens = [
     const GoogleFontsSamples(),
-     FontAwesomeFlutter(),
+    FontAwesomeFlutter(),
+    // const BatteryInfo(),
+     DeviceInfo()
   ];
   @override
   Widget build(BuildContext context) {
@@ -49,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                             builder: (context) => _packagescreens[index]),
                       );
                     }),
-                title:  Text(
+                title: Text(
                   _packagetitle[index],
                   style: const TextStyle(
                     fontSize: 25,
