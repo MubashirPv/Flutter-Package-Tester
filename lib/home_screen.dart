@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_package_tester/packages/device_info.dart';
+import 'package:flutter_package_tester/packages/geolocator.dart';
 // import 'package:flutter_package_tester/packages/battery_info.dart';
 // import 'package:flutter_package_tester/packages/device_info.dart';
 import 'package:flutter_package_tester/packages/google_fonts.dart';
@@ -12,20 +13,20 @@ class HomeScreen extends StatelessWidget {
   final _packagetitle = [
     "Google Fonts",
     "Font Awesome Flutter",
-    // "Battery info",
+    "Geolocator",
      "Device info",
   ];
   final _packagesubtitle = [
     "A Flutter package to use fonts from fonts.google.com",
     "The Font Awesome Icon pack available as Flutter Icons",
-    // "A Flutter plugin to access various information about the battery of the device the app is running on",
+    "Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions",
     'Get current device information from within the Flutter application',
   ];
   final _packagescreens = [
     const GoogleFontsSamples(),
     FontAwesomeFlutter(),
-    // const BatteryInfo(),
-     DeviceInfo()
+     const GeoLocator(),
+     const DeviceInfo()
   ];
   @override
   Widget build(BuildContext context) {
