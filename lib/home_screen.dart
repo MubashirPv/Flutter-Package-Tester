@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_package_tester/packages/auto_size_text.dart';
 import 'package:flutter_package_tester/packages/device_info.dart';
 import 'package:flutter_package_tester/packages/geolocator.dart';
 // import 'package:flutter_package_tester/packages/battery_info.dart';
@@ -14,19 +15,22 @@ class HomeScreen extends StatelessWidget {
     "Google Fonts",
     "Font Awesome Flutter",
     "Geolocator",
-     "Device info",
+    "Device info",
+    "Auto Size Text"
   ];
   final _packagesubtitle = [
     "A Flutter package to use fonts from fonts.google.com",
     "The Font Awesome Icon pack available as Flutter Icons",
     "Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions",
     'Get current device information from within the Flutter application',
+    "Flutter widget that automatically resizes text to fit perfectly within its bounds"
   ];
   final _packagescreens = [
     const GoogleFontsSamples(),
     FontAwesomeFlutter(),
-     const GeoLocator(),
-     const DeviceInfo()
+    const GeoLocator(),
+    const DeviceInfo(),
+    const AutoSizeTextScreen()
   ];
   @override
   Widget build(BuildContext context) {

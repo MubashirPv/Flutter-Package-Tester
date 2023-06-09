@@ -40,6 +40,7 @@ dependencies:
   # battery_plus: ^4.0.1
   device_info_plus: ^9.0.2
   geolocator: ^9.0.2
+  auto_size_text: ^3.0.0
 
 
 dev_dependencies:

@@ -34,27 +34,28 @@ class _DeviceInfoState extends State<DeviceInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: FutureBuilder<AndroidDeviceInfo>(
-          future: getInfo(),
-          builder: (context, snapshot) {
-  if (snapshot.hasData) {
-    final data = snapshot.data!;
-    return Column(
-      children: [
-        showCard("version", data.brand),
-        showCard("version", data.model),
-        showCard("version", data.hardware),
-        showCard("version", data.manufacturer),
-      ],
-    );
-  } else if (snapshot.hasError) {
-    return Text("Error: ${snapshot.error}");
-  } else {
-    return const CircularProgressIndicator();
-  }
-},
-        ),
+      appBar: AppBar(
+        title: const Text('Device Info'),
+      ),
+      body: FutureBuilder<AndroidDeviceInfo>(
+        future: getInfo(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            final data = snapshot.data!;
+            return Column(
+              children: [
+                showCard("version", data.brand),
+                showCard("version", data.model),
+                showCard("version", data.hardware),
+                showCard("version", data.manufacturer),
+              ],
+            );
+          } else if (snapshot.hasError) {
+            return Text("Error: ${snapshot.error}");
+          } else {
+            return const CircularProgressIndicator();
+          }
+        },
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_package_tester/home_screen.dart';
 
@@ -26,8 +27,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
         backgroundColor: Colors.blue,
         body: Center(
-            child: Text(
+            child: AutoSizeText(
           'Flutter Package Tester',
+          maxLines: 1,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -49,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) {
-          return  HomeScreen();
+          return HomeScreen();
         },
       ),
     );
