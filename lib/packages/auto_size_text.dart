@@ -20,7 +20,6 @@ class _AutoSizeTextScreenState extends State<AutoSizeTextScreen> {
         child: Column(
           children: [
             const SizedBox(
-              child: Text('sata'),
               height: 30,
             ),
             TextField(
@@ -50,11 +49,13 @@ class _AutoSizeTextScreenState extends State<AutoSizeTextScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 60),
-            const Text('Auto Size Text',
-            style: TextStyle(
+            const Text(
+              'Auto Size Text',
+              style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-              ),),
+              ),
+            ),
             const SizedBox(height: 16.0),
             AutoSizeText(
               _inputText,
