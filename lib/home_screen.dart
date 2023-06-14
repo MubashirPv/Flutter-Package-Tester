@@ -3,6 +3,7 @@ import 'package:flutter_package_tester/packages/animated_text_kit.dart';
 import 'package:flutter_package_tester/packages/auto_size_text.dart';
 import 'package:flutter_package_tester/packages/carousel_slider.dart';
 import 'package:flutter_package_tester/packages/device_info.dart';
+import 'package:flutter_package_tester/packages/flutter_spinkit.dart';
 import 'package:flutter_package_tester/packages/geolocator.dart';
 // import 'package:flutter_package_tester/packages/battery_info.dart';
 // import 'package:flutter_package_tester/packages/device_info.dart';
@@ -20,7 +21,8 @@ class HomeScreen extends StatelessWidget {
     "Device info",
     "Auto Size Text",
     "Animated Text Kit",
-    "Carousel Slider"
+    "Carousel Slider",
+    "Flutter Spinkit"
   ];
   final _packagesubtitle = [
     "A Flutter package to use fonts from fonts.google.com",
@@ -29,7 +31,8 @@ class HomeScreen extends StatelessWidget {
     'Get current device information from within the Flutter application',
     "Flutter widget that automatically resizes text to fit perfectly within its bounds",
     "A flutter package project which contains a collection of cool and beautiful text animations",
-    "A carousel slider widget, support infinite scroll and custom child widget"
+    "A carousel slider widget, support infinite scroll and custom child widget",
+    "A collection of loading indicators animated with flutter"
   ];
   final _packagescreens = [
     const GoogleFontsSamples(),
@@ -38,7 +41,8 @@ class HomeScreen extends StatelessWidget {
     const DeviceInfo(),
     const AutoSizeTextScreen(),
     const AnimatedTextkit(),
-    const CarouselSliderPackage()
+    const CarouselSliderPackage(),
+    const Spinkit(),
   ];
   @override
   Widget build(BuildContext context) {
